@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 	//Identifying data types can be done in 2 ways:
@@ -17,4 +20,13 @@ func main() {
 	fmt.Printf("The variable name %v is %T \n", name, name)
 	fmt.Printf("The variabe isSuccess %v is %T \n", isSuccess, isSuccess)
 	fmt.Printf("The variable amount %v is %T \n", amount, amount)
+
+	//Using reflect.TypeOf
+	fmt.Println("Using reflect.Typeof: ")
+	var school string = "Banwo"
+	var grade int = 40
+
+	fmt.Printf("The variable school %v is of datatype %v \n", school, reflect.TypeOf(school))
+	fmt.Printf("The variable grade %v is of datatype %v \n", grade, reflect.TypeOf(grade))
+	fmt.Println("The variable school", school, "is of datatype", reflect.TypeOf(school))
 }
