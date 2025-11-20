@@ -1,7 +1,10 @@
 package main
 
+import "fmt"
+
 func main() {
 	//array
 
-	//var fruits 2[] string =
+	fruits := [3]string{"apples", "orages", "banana"}
+	fmt.Println(fruits)
 }
