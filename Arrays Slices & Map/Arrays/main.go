@@ -49,4 +49,15 @@ func main() {
 	{{5,6},{7,8}},
 	}
 	*/
+	fmt.Println("2-dimensional array")
+	arr := [3][2]int{{30, 40}, {50, 60}, {70, 80}}
+	fmt.Println(arr[2][1])
+	//Looping a 2-dimensional array
+	fmt.Println("Looping 2-dimensional array")
+	for i := 0; i < len(arr); i++ {
+		for j := 0; j < len(arr[i]); j++ {
+			fmt.Print(arr[i][j], " ")
+		}
+		fmt.Println()
+	}
 }
