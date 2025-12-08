@@ -60,4 +60,33 @@ func main() {
 		}
 		fmt.Println()
 	}
+
+	// Todo: declare a 3-dimensional array and loop through it
+	fmt.Println("Looping 3-dimensional array")
+	arr3 := [2][3][2]int{
+		{{1, 2}, {3, 4}, {5, 6}},
+		{{7, 8}, {9, 10}, {11, 12}},
+	}
+	for i := 0; i < len(arr3); i++ {
+		for j := 0; j < len(arr3[i]); j++ {
+			fmt.Print(arr3[i][j], " ")
+		}
+		fmt.Println()
+	}
+
+	fmt.Println("Another 3-dimensional array")
+	arr4 := [2][3][3]int{
+		{{1, 2, 13}, {3, 4, 14}, {5, 6, 15}},
+		{{7, 8, 16}, {9, 10, 17}, {11, 12, 18}},
+	}
+	for i := 0; i < len(arr4); i++ {
+		for j := 0; j < len(arr4[i]); j++ {
+			for k := 0; k < len(arr4[j]); k++ {
+				fmt.Print(arr4[i][j][k], " ")
+			}
+			fmt.Println()
+		}
+		fmt.Println()
+	}
+
 }
