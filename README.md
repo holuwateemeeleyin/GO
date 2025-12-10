@@ -1,4 +1,5 @@
 # GO
 
-Daily learning of Golang.
-This repo is for daily updates on what I learn.
+My Journey to Golang
+
+This repo is for updates on what I learn and lessons.
