@@ -8,3 +8,8 @@ The aim of this repository is simple:
 ✅ Practice by writing code daily
 ✅ Take clear notes on concepts learned
 ✅ Track progress publicly for accountability
+
+
+🤝 Contributions
+
+This is a personal learning repo, but if you have suggestions or better ways to approach a problem, feel free to open an issue or drop a comment.
