@@ -9,6 +9,17 @@ func printDetails(student string, subjects ...string) {
 	}
 }
 
+// Recursive function
+func factorial(n int) int {
+	if n == 1 {
+		return 1
+	}
+	return n * factorial(n-1)
+}
+
 func main() {
 	printDetails("Sam", "Maths", "English")
+	fmt.Println()
+	num := 6
+	fmt.Println("The Factorial of ", num, "is ", factorial(num))
 }
