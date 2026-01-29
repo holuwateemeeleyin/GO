@@ -17,9 +17,29 @@ func factorial(n int) int {
 	return n * factorial(n-1)
 }
 
+// Anonymous Function
+/*
+ Anonymous function is a function that is declared without any named identifier to refer to it.
+ They can accept inputs and return outputs just as standard functions.
+ They can be used for containing functionality that need not be named and possibly for short term use
+*/
+
 func main() {
 	printDetails("Sam", "Maths", "English")
 	fmt.Println()
 	num := 6
 	fmt.Println("The Factorial of ", num, "is ", factorial(num))
+
+	// Using an Anonymous function
+	x := func(a int, b int) int {
+		return a * b
+	}
+	fmt.Println("First use of Anonymous function: ", x(20, 30))
+
+	// Comment: Though the function is assigned to a variable x, the functionn does not have a name.
+	// it can also be used in this format
+	y := func(l int, b int) int {
+		return l * b
+	}(5, 10)
+	fmt.Println("Second use: ", y)
 }
