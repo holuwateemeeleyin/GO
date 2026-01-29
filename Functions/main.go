@@ -1,20 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func printDetails(student string, subjects ...string) {
 	fmt.Println("Hey, ", student, "here are your subjects - ")
 	for _, sub := range subjects {
 		fmt.Printf("%s, ", sub)
 	}
-}
-
-// Recursive function
-func factorial(n int) int {
-	if n == 1 {
-		return 1
-	}
-	return n * factorial(n-1)
 }
 
 // Anonymous Function
@@ -28,6 +22,7 @@ func main() {
 	printDetails("Sam", "Maths", "English")
 	fmt.Println()
 	num := 6
+	//Recursive Function
 	fmt.Println("The Factorial of ", num, "is ", factorial(num))
 
 	// Using an Anonymous function
