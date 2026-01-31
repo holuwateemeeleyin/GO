@@ -37,4 +37,12 @@ func main() {
 		return l * b
 	}(5, 10)
 	fmt.Println("Second use: ", y)
+	//Get User
+	fmt.Println("This is Get User Information in getUser file")
+	user, err := getUser(123)
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}
+	fmt.Printf("The user details: %+v", user)
 }
