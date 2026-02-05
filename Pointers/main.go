@@ -12,4 +12,9 @@ func main() {
 	// or
 	p := &i
 	fmt.Printf("%T, %v \n", *p, *p)
+	// calling a function
+	declarePointer()
+	initialisePointer1()
+	initialisePointer2()
+	initialisePointer3()
 }
