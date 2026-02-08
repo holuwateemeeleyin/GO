@@ -17,5 +17,8 @@ func main() {
 		Colour: "Green",
 		Age:    29,
 	}
+
+	//user3 := new(User)
+	// To access the fields of a struct, we can use the dot notation. We can also use the pointer to access the fields of a struct.
 	fmt.Printf("User %+v\n", p)
 }
