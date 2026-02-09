@@ -18,7 +18,9 @@ func main() {
 		Age:    29,
 	}
 
+	fmt.Printf("User %+v\n", p)
 	//user3 := new(User)
 	// To access the fields of a struct, we can use the dot notation. We can also use the pointer to access the fields of a struct.
-	fmt.Printf("User %+v\n", p)
+	//The new function allocates memory for a new struct instance and returns a pointer to it. The fields of the struct are initialized to their zero values.
+
 }
