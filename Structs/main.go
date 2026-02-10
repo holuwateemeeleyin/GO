@@ -19,8 +19,17 @@ func main() {
 	}
 
 	fmt.Printf("User %+v\n", p)
+
+	// Using the new function to create a pointer to a struct
+
 	//user3 := new(User)
 	// To access the fields of a struct, we can use the dot notation. We can also use the pointer to access the fields of a struct.
 	//The new function allocates memory for a new struct instance and returns a pointer to it. The fields of the struct are initialized to their zero values.
+	user := new(Person)
+	user.Name = "Timi Aji"
+	user.Colour = "Blue"
+	user.Age = 30
+	fmt.Println("Using new function to create a pointer to a struct:")
+	fmt.Printf("User %+v\n", *user)
 
 }
