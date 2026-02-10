@@ -32,4 +32,15 @@ func main() {
 	fmt.Println("Using new function to create a pointer to a struct:")
 	fmt.Printf("User %+v\n", *user)
 
+	//Constructor function
+	fmt.Println("Constructor function: ")
+	p2 := NewUser("Sam", 25, "Male")
+	if p2 != nil {
+		fmt.Printf("%+v \n", *p2)
+	}
+
+	invalidUser := NewUser("Jane", -5, "Female")
+	if invalidUser == nil {
+		fmt.Println("Invalid user: Age cannot be negative.")
+	}
 }
