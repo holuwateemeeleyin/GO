@@ -26,4 +26,12 @@ func main() {
 	// 2. Replacing a string
 	replacedString := strings.Replace(sentence, "Chelsea", "Arsenal", 1)
 	fmt.Println("Replaced String:", replacedString)
+	//3. Upper and Lower case
+	fmt.Println("UpperCase:", strings.ToUpper(sentence))
+	fmt.Println("LowerCase:", strings.ToLower(sentence))
+	//4. Trim
+	fmt.Println("Trim:", strings.Trim("  Trim     ", " "))
+	//Subset
+	fmt.Println("Subset:", sentence[0:19])
+
 }
