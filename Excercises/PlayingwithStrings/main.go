@@ -23,5 +23,7 @@ func main() {
 	// 1. Splitting a string
 	result := strings.Split(sentence, " ")
 	fmt.Println("Splitted result:", result)
-
+	// 2. Replacing a string
+	replacedString := strings.Replace(sentence, "Chelsea", "Arsenal", 1)
+	fmt.Println("Replaced String:", replacedString)
 }
