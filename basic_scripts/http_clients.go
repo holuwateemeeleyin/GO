@@ -1,0 +1,5 @@
+package basicscripts
+
+func main() {
+
+}
