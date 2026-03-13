@@ -36,4 +36,25 @@ func main() {
 	//Read the response
 	postRespBody, _ := io.ReadAll(postResp.Body)
 	fmt.Println("POST Response:", string(postRespBody))
+
+	//HTTP PUT Request
+	client := &http.Client{}
+	//create the request body
+	putBody := []byte(`{"key":"updated value"}`)
+	//create the pull request
+	putReq, err := http.NewRequest(http.MethodPut, baseURL+"/put", bytes.NewBuffer(putBody))
+	// set the request header
+	putReq.Header.Set("Content-Type", "application/json")
+	//Send the Request
+	putResp, err := client.Do(putReq)
+	if err != nil {
+		fmt.Println("Error on PUT Request:", err)
+		return
+	}
+	//close the response body
+	defer putResp.Body.Close()
+	//Read the response
+	putRespBody, _ := io.ReadAll(putResp.Body)
+	fmt.Println("PUT Response:", string(putRespBody))
+
 }
