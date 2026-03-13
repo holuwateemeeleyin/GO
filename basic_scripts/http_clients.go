@@ -57,4 +57,18 @@ func main() {
 	putRespBody, _ := io.ReadAll(putResp.Body)
 	fmt.Println("PUT Response:", string(putRespBody))
 
+	//HTTP DELETE Request
+	//create the request
+	delReq, err := http.NewRequest(http.MethodDelete, baseURL+"/delete", nil)
+	//send the request
+	delResp, err := client.Do(delReq)
+	if err != nil {
+		fmt.Println("Error on DELETE Request:", err)
+		return
+	}
+	//close the connection
+	defer delResp.Body.Close()
+	// Read the Response
+	delBodyResp, _ := io.ReadAll(delResp.Body)
+	fmt.Println("DELETE Response:", string(delBodyResp))
 }
