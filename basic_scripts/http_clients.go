@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"io"
 	"net/http"
@@ -21,4 +22,18 @@ func main() {
 		return
 	}
 	fmt.Println("GET Response:", string(getBody))
+
+	// Http POST Request:
+	//create the body
+	postBody := []byte(`{"key":"value"}`)
+	//send the body
+	postResp, err := http.Post(baseURL+"/post", "application/json", bytes.NewBuffer(postBody))
+	if err != nil {
+		fmt.Println("Error on POST Request:", err)
+	}
+	//Close the connection
+	defer postResp.Body.Close()
+	//Read the response
+	postRespBody, _ := io.ReadAll(postResp.Body)
+	fmt.Println("POST Response:", string(postRespBody))
 }
