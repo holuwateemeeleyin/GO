@@ -8,6 +8,14 @@ func displayTasks(tasks []string) {
 		index++
 		fmt.Printf("%d. %s \n", index, task)
 	}
+	fmt.Printf("You have %d items in the list \n", len(tasks))
+}
+
+// Add Task
+func addTask(taskItems []string, newTask string) {
+	updatedTasks := append(taskItems, newTask)
+	fmt.Println("These are the updated tasks in your Todo:")
+	displayTasks(updatedTasks)
 }
 
 func main() {
@@ -15,6 +23,5 @@ func main() {
 	fmt.Println("These are the tasks in your Todo:")
 	tasks := []string{"Apple", "Banana", "Orange"}
 	displayTasks(tasks)
-	fmt.Printf("You have %d items in the list \n", len(tasks))
-
+	addTask(tasks, "Yam")
 }
