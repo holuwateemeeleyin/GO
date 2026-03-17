@@ -12,10 +12,11 @@ func displayTasks(tasks []string) {
 }
 
 // Add Task
-func addTask(taskItems []string, newTask string) {
+func addTask(taskItems []string, newTask string) []string {
 	updatedTasks := append(taskItems, newTask)
 	fmt.Println("These are the updated tasks in your Todo:")
 	displayTasks(updatedTasks)
+	return updatedTasks
 }
 
 // Delete Task
@@ -36,6 +37,6 @@ func main() {
 	fmt.Println("These are the tasks in your Todo:")
 	tasks := []string{"Apple", "Banana", "Orange"}
 	displayTasks(tasks)
-	addTask(tasks, "Yam")
-	removeTask(tasks, "Apple")
+	tasks = addTask(tasks, "Yam")
+	tasks = removeTask(tasks, "Apple")
 }
