@@ -1,5 +1,4 @@
 # GO
+## Daily learning of Golang.
 
-Daily learning of Golang.
-This repo is for concepts learnt and exercises done with Golang
-You can contribute to the repo if you find ways to make learning Go easy
+This repository contains concepts learned, exercises, and projects built while exploring the Go programming language. It serves as a personal knowledge base and a practical guide for mastering Go through consistent practice.
